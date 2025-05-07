@@ -68,6 +68,7 @@ urlpatterns = [
     path('', ApiRoot.as_view(), name='api-root'),  # Root URL ahora muestra la API raíz
     path('admin/', admin.site.urls),
     path('api/', ApiRoot.as_view()),  # También mantener la URL /api/ como alternativa
+    path('api-auth/', include('rest_framework.urls')),  # URLs de autenticación
     path('Ejemplo/', include('Ejemplo.urls')),
     path('galeria/', include('galeria.urls')),
     path('multimedia/', include('gestor_multimedia.urls')),
